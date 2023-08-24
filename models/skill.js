@@ -9,7 +9,15 @@ let skills = [
 
 module.exports ={
     getAll,
-    getOne
+    getOne,
+    create
+}
+
+function create(skill){
+    console.log(skill)
+    skill.id = Date.now() % 1000000;
+    skill.learned = false;
+    skills.push(skill)
 }
 
 function getAll(){
