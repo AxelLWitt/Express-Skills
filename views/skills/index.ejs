@@ -2,9 +2,17 @@
     <ul>
         <% skills.forEach(function(s) { %>
             <li>
+                <form action="/skills/<%= s.skill %>?_method=DELETE" 
+                    class='delete-form' method="POST">
+                    <button type="submit">X</button>
+                </form>
                 <a href='/skills/<%= s.id %>'><%= s.skill %></a>
                 -
                 <%= s.learned ? 'In Repetoire' : 'In Progress' %>
+                <form action='/skills/<%= s.learned %>?_method=LEARNED' 
+                    class="learn-status" method='POST'>
+                <button type="submit">✓</button>
+                </form>
             </li>
        <% }); %>
     </ul>

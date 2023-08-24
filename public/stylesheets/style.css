@@ -6,3 +6,27 @@ body {
 a {
   color: #00B7FF;
 }
+
+.delete-form {
+  display: inline-block;
+  margin-right: 10px;
+}
+	
+.delete-form button {
+  color: red;
+  border:none;
+}
+	
+li {
+  list-style: none;
+}
+
+.learn-status{
+  display:inline-block;
+  margin-right:10px;
+}
+
+.learn-status button{
+  color:green;
+  border:none;
+}

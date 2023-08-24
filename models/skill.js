@@ -10,7 +10,9 @@ let skills = [
 module.exports ={
     getAll,
     getOne,
-    create
+    create,
+    deleteID,
+    learn
 }
 
 function create(skill){
@@ -27,4 +29,16 @@ function getAll(){
 function getOne(id){
     id = parseInt(id)
     return skills.find(skill => skill.id === id)
+}
+
+function deleteID(id){
+    id = parseInt(id)
+    const index = skills.findIndex(skill => skill.id === id)
+    skills.splice(index, 1)
+}
+
+function learn(id){
+    id = parseInt(id)
+    const index = skills.findIndex(skill => skills.id === id)
+    skills[index].learned = false ? true : false
 }
